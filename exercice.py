@@ -16,6 +16,7 @@ def color_name_to_hex(colors: list) -> list:
 
 
 def odd_integer_for_loop(end: int) -> list:
+
     return []
 
 
@@ -27,11 +28,11 @@ def loop_traversal(integers: list) -> None:
     pass
 
 
-def word_dict_for_loop() -> dict:
+def word_dict_for_loop(words: list) -> dict:
     return {}
 
 
-def word_dict_comprehension() -> dict:
+def word_dict_comprehension(words: list) -> dict:
     return {}
 
 
@@ -64,7 +65,7 @@ def main() -> None:
 
     print(f"Les 2 dictionnaires sont-ils identiques? {words_for == words_comprehension}")
     print(f"Parcours d'un des 2 dictionnaires...")
-    loop_traversal(words_comprehension)
+    dictionary_traversal(words_comprehension)
 
 
 if __name__ == '__main__':
