@@ -1,31 +1,42 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+
 from matplotlib.colors import cnames
 
 
 def list_to_dict(some_list: list) -> dict:
     # TODO: Transformer la liste en dictionnaire, les éléments de la liste deviennent les clés et leur index deviennent les valeurs
-
     return {}
 
 
 def color_name_to_hex(colors: list) -> list:
     # TODO: Trouver la valeur hex de chaque couleur dans la liste et créer une liste de tupple où le premier élément est le nom de la couleur et le deuxième est la valeur hex
-
     return []
 
 
-def create_list() -> list:
-    # TODO: Créer une liste des 10 000 premiers entiers positif, sauf pour les entiers de 15 à 350
-
+def odd_integer_for_loop(end: int) -> list:
     return []
 
 
-def compute_mse(model_dict: dict) -> dict:
-    # TODO: Calculer l'erreur quadratique moyen pour chaque modèle. Retourner un dictionnaire contenant les MSE.
+def odd_integer_list_comprehension(end: int) -> list:
+    return []
 
+
+def loop_traversal(integers: list) -> None:
+    pass
+
+
+def word_dict_for_loop() -> dict:
     return {}
+
+
+def word_dict_comprehension() -> dict:
+    return {}
+
+
+def dictionary_traversal(words: dict) -> None:
+    pass
 
 
 def main() -> None:
@@ -35,12 +46,25 @@ def main() -> None:
     colors = ["blue", "red", "green", "yellow", "black", "white"]
     print(f"La valeur hex associée aux couleurs est: {color_name_to_hex(colors)}")
 
-    print(f"La liste des 10000 entiers est: {create_list()}")
+    integer = 13
+    integers_for = odd_integer_for_loop(integer)
+    print(f"Liste avec boucle for et le nombre 13: {integers_for}")
+    integers_comprehension = odd_integer_for_loop(integer)
+    print(f"Liste avec list comprehension et le nombre 13: {integers_comprehension}")
 
-    model_dict = {"LR": [(90, 92), (96, 100), (20, 25), (21, -2), (3, -20)],
-                  "DNN": [(100, 101), (50, 50), (1,2), (-10, -12), (-1, 7)],
-                  "RF": [(10, 19), (56, 70), (1, 9), (-100, -12), (-11, 7)]}
-    print(f"Le mse des différents modèles est: {compute_mse(model_dict)}")
+    print(f"Les 2 listes sont-elles identiques? {integers_for == integers_comprehension}")
+    print(f"Parcours d'une des 2 listes...")
+    loop_traversal(integers_for)
+
+    words = ["initialisation", "ajout", "modification", "suppression", "dictionnaire"]
+    words_for = word_dict_for_loop(words)
+    print(f"Dictionnaire avec la boucle for: {words_for}")
+    words_comprehension = word_dict_comprehension(words)
+    print(f"Dictionnaire avec le dictionary comprehension: {words_comprehension}")
+
+    print(f"Les 2 dictionnaires sont-ils identiques? {words_for == words_comprehension}")
+    print(f"Parcours d'un des 2 dictionnaires...")
+    loop_traversal(words_comprehension)
 
 
 if __name__ == '__main__':
